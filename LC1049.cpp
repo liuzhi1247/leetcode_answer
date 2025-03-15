@@ -1,4 +1,5 @@
 # https://leetcode.cn/problems/last-stone-weight-ii/
+// same as LC416
 
 class Solution {
 public:
