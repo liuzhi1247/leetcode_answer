@@ -1,5 +1,8 @@
 # https://leetcode.cn/problems/target-sum/
 # dp solution
+这两行需要进行特殊前置处理
+// if (abs(target) > sum) return 0; // 此时没有方案
+//if ((target + sum) % 2 == 1) return 0; // 此时没有方案
 
 class Solution {
 public:
