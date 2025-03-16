@@ -1,4 +1,4 @@
-#this file is to record the daily promote leetcode codes
+# this file is to record the daily promote leetcode codes
 
 # 2025/03/16
 update .cpp files to .md files
