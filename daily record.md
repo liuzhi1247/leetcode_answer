@@ -5,7 +5,8 @@
 - Update .cpp files to .md files
 - Add 01背包模板和完全背包模板
 - Add filefolder 技术支持，解决push没法到main的代理连接问题
-- update 完全背包的组合问题和排列问题解法
+- update 完全背包的组合问题/排列问题/求最小值解法
+- add 01背包题目record.md以及完全背包record.md
 
 ## 2025/03/15
 
