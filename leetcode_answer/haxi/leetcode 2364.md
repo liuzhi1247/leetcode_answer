@@ -1,3 +1,5 @@
+[力扣中国题目链接](https://leetcode.cn/problems/count-bad-pairs/)
+
 # LeetCode 2364. 统计坏数对的数目
 
 ## 题目描述
