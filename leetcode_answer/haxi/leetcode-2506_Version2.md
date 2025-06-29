@@ -1,0 +1,57 @@
+[力扣中国题目链接](https://leetcode.cn/problems/count-pairs-of-similar-strings/)
+
+# LeetCode 2506. 统计相似字符串对的数目
+
+## 题目描述
+
+给你一个字符串数组 `words`，请你统计其中「相似字符串对」的数目。
+
+如果一对下标 (i, j) 满足 i < j 且 `words[i]` 和 `words[j]` 所含字符集合相同，则视为相似字符串对。
+
+---
+
+## 题解思路
+
+- **集合与位运算**：把字符串 s 中出现过的字母视作一个集合，并用二进制数 mask 表示。mask 第 i 位为 1 表示第 i 个小写字母在 s 中，否则为 0。
+- **遍历 + 哈希计数**：遍历 words，计算每个字符串的 mask，用哈希表 cnt 维护 mask 的出现次数。
+- **计数方式**：遍历到当前 mask 时，先把 cnt[mask] 加到答案中（代表前面已经出现过的相同集合字符串对），再把 cnt[mask] 加一。
+- **顺序保证**：只有 i < j 时才统计，不会重复或统计到自身。
+
+---
+
+## 代码实现（C++）
+
+```cpp
+class Solution {
+public:
+    int similarPairs(vector<string>& words) {
+        unordered_map<int, int> cnt;
+        int ans = 0;
+        for (auto& s : words) {
+            int mask = 0; // 初始化一个空的集合
+            for (char c : s) {
+                mask |= 1 << (c - 'a'); // 把 c 加到集合中
+            }
+            ans += cnt[mask]++;
+        }
+        return ans;
+    }
+};
+```
+
+---
+
+## 复杂度分析
+
+- 时间复杂度：O(n * m)，n 为字符串个数，m 为字符串平均长度。
+- 空间复杂度：O(1)，最多 2^26 个不同集合，实际远小于此。
+
+---
+
+## 小结
+
+- 利用位运算把字符集合高效编码，配合哈希表实现快速统计。
+- 计数顺序关键，防止重复和自统计。
+- 常见于“集合判等”类题目，技巧通用性强。
+
+---
