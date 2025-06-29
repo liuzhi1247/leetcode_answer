@@ -1,0 +1,22 @@
+{
+  "1": "AC",
+  "121": "REVIEW_NEEDED",
+  "219": "AC",
+  "624": "REVIEW_NEEDED",
+  "1014": "REVIEW_NEEDED",
+  "1128": "AC",
+  "1512": "AC",
+  "1679": "REVIEW_NEEDED",
+  "1814": "AC",
+  "2001": "AC",
+  "2016": "AC",
+  "2260": "AC",
+  "2342": "AC",
+  "2364": "REVIEW_NEEDED",
+  "2441": "AC",
+  "2815": "REVIEW_NEEDED",
+  "2905": "TOO_HARD",
+  "3371": "REVIEW_NEEDED",
+  "3584": "REVIEW_NEEDED",
+  "面试题 16.24": "REVIEW_NEEDED"
+}
